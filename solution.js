@@ -10,12 +10,12 @@ rl.question('Please, enter a length of a random string: ', length => {
 
     console.log(`Generated string: ${firstString}\n`)
 
-    rl.question('Please, enter a character to change all alphabetic symbols: ', (firstCharacter) => {
+    rl.question('Please, enter a character to change all alphabetic symbols: ', firstCharacter => {
         const secondString = StringMethods.changeCharacter(firstString, firstCharacter)
 
         console.log(`Second generated string: ${secondString}\n`)
 
-        rl.question('Please, enter a character to change all alphabetic symbols: ', (secondCharacter) => {
+        rl.question('Please, enter a character to change all alphabetic symbols: ', secondCharacter => {
             const thirdString = StringMethods.changeCharacter(secondString, secondCharacter, true)
 
             const firstCharacterRepetitions = thirdString
