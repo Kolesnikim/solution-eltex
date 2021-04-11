@@ -6,7 +6,7 @@ const rl = readline.createInterface({
 })
 
 rl.question('Please, enter a length of a random string: ', length => {
-    const firstString = StringMethods.generateRandomString(length);
+    const firstString = StringMethods.generateRandomString(length)
 
     console.log(`Generated string: ${firstString}\n`)
 
@@ -36,7 +36,7 @@ rl.question('Please, enter a length of a random string: ', length => {
             console.log(`The number of second character repetitions: ${secondCharacterRepetitions}\n`)
             console.log(`The number of non-changed characters: ${nonChangedCharacters}\n`)
 
-            rl.close();
+            rl.close()
         })
     })
 });
@@ -47,15 +47,15 @@ class StringMethods {
             throw Error("The length of a string must be a number, not a character!")
         }
 
-        let pattern = "abdefghijklmnoqrtuvwyz0123456789+-_$~";
+        let pattern = "abdefghijklmnoqrtuvwyz0123456789+-_$~"
 
-        let text = "";
+        let text = ""
 
         for (let i = 0; i < length; i++) {
-            text += pattern.charAt(Math.floor(Math.random() * pattern.length));
+            text += pattern.charAt(Math.floor(Math.random() * pattern.length))
         }
 
-        return text;
+        return text
     }
 
     static changeCharacter(string, character, changeNumbers = false) {
